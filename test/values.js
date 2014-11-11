@@ -41,6 +41,7 @@ exports.testFlag = function(test) {
    test.done();
 }
 
+
 exports.testList = function(test) {
    var options = parser.parse(["pos0", "pos1", "--list1=val0", "--list2", "val1",
      "--list2", "val2", "pos2"]);
@@ -72,4 +73,14 @@ exports.testTypes = function(test) {
    test.done();
 }
 
+exports.testByHAl = function(test) {
+   var options = parser.nom(["", "-x", "3.14", "-w", "true", "-q", "120",
+     "--num1", "4"]);
+   test.strictEqual(options[0], "");
+   test.strictEqual(options.x, 3.14);
+   test.strictEqual(options.w, true);
+   test.strictEqual(options.q, 120);
+   test.strictEqual(options.num1, "4");
+   test.done();
+}
 
