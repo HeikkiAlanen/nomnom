@@ -4,7 +4,8 @@
   "version": "1.8.0",
   "author": "Heather Arthur <fayearthur@gmail.com>",
   "scripts": {
-    "test": "./node_modules/.bin/nodeunit test"
+    "test": "./node_modules/.bin/nodeunit test",
+    "coverage": "istanbul cover ./node_modules/nodeunit/bin/nodeunit test"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
     "chalk": "~0.4.0"
   },
   "devDependencies": {
+    "istanbul": "^0.3.2",
     "nodeunit": "~0.7.4"
   }
 }
